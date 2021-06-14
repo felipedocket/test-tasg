@@ -2,7 +2,7 @@ import setuptools
 
 print("Instalando pacote test-tag")
 
-setup(
+setuptools.setup(
 	name='test_tasg',
 	version='0.0.1',
 	description='Hello world',
