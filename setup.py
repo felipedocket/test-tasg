@@ -1,4 +1,5 @@
 import setuptools 
+from setuptools.command.install import install
 import os
 
 class PostInstall(install):
