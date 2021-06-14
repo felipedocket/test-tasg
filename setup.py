@@ -1,7 +1,8 @@
 import setuptools 
 import os
 
-print("Instalando pacote test-tag")
+def _post_install():    
+	os.system('dvc get https://github.com/felipedocket/test-tasg.git tree2.jpg')
 
 setuptools.setup(
 	name='test_tasg',
@@ -12,4 +13,4 @@ setuptools.setup(
 	packages=setuptools.find_packages(),
 )
 
-os.system('dvc get https://github.com/felipedocket/test-tasg.git tree2.jpg')
+_post_install()
