@@ -11,7 +11,7 @@ setuptools.setup(
 	packages=setuptools.find_packages(),
 	entry_points={
         'console_scripts': [
-            'test_tasg=test_tag.main:hello',
+            'test_tasg=main:hello',
         ],
     }
 )
