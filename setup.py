@@ -16,5 +16,3 @@ setuptools.setup(
 	packages=setuptools.find_packages(),
 	cmdclass={'install': PostInstall},
 )
-
-_post_install()
