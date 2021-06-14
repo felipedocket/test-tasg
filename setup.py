@@ -1,8 +1,10 @@
 import setuptools 
 import os
 
-def _post_install():    
-	os.system('dvc get https://github.com/felipedocket/test-tasg.git tree2.jpg')
+class PostInstall(install):
+	def run(self):    
+		print("Conseguindo modelo.")
+		os.system('dvc get https://github.com/felipedocket/test-tasg.git tree2.jpg')
 
 setuptools.setup(
 	name='test_tasg',
@@ -11,6 +13,7 @@ setuptools.setup(
 	py_modules=[''],
 	url='https://github.com/felipedocket/test-tasg',
 	packages=setuptools.find_packages(),
+	cmdclass={'install': PostInstall},
 )
 
 _post_install()
